@@ -1,0 +1,26 @@
+<%- include("../partials/_header") %>
+
+<%- include("../partials/_navbar") %>
+<div class="container-md">
+
+    <%- include("../partials/_alert") %>
+
+    <a href="/" class="btn btn-outline-primary mt-3 mb-5">&larr;Back</a>
+    <div class="row justify-content-center">
+        <div class="border p-4 rounded-3" style="width: 290px;" id="login-form">
+            <h2 class="text-center mb-4">LOGIN</h2>
+            
+            <form action="/teacher" method="post">
+                <div class="mb-5">
+                <label for="inputPassword" class="form-label">Enter Password:</label>
+                <input type="password" name="password" class="form-control" id="inputPassword">
+                </div>
+                <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-outline-primary">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include("../partials/_footer") %>

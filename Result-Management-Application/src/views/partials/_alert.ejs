@@ -1,0 +1,11 @@
+<% if(messages){ %>
+    <% for(var i in messages){ %>
+        <div class="alert alert-<%=i%>" role="alert" id="alert">
+            <div class="d-md-flex justify-content-md-between">
+                <%= messages[i] %>
+                <button type="button" class="btn-close" onclick="closeAlert()"></button>
+            </div>
+            
+        </div>
+    <% } %>    
+<% } %>

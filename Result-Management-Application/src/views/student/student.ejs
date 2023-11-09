@@ -1,0 +1,33 @@
+<%- include("../partials/_header") %>
+
+<%- include("../partials/_navbar") %>
+<div class="container-md mt-3">
+    <%- include("../partials/_alert") %>
+    <div class="row justify-content-center">
+        <div class="mt-5 mb-4 text-center">
+            <h3 style="text-decoration: underline;">Find Result</h3>
+            <p>Enter the information below to see the result</p>
+        </div>
+        <form action="/student/result" method="POST" id="search-form">
+            <div class="row mb-3">
+            <label for="rollno" class="col-sm-4 col-form-label">Roll No.</label>
+            <div class="col-sm-8">
+                <input type="number" name="rollno" class="form-control" id="rollno" required>
+            </div>
+            </div>
+            <div class="row mb-3">
+            <label for="name" class="col-sm-4 col-form-label">Date of Birth</label>
+            <div class="col-sm-8">
+                <input type="date" name="dob" class="form-control" id="dob" required>
+            </div>
+            </div>
+            
+            <div class="mt-5 d-flex gap-2 justify-content-md-center">
+                <button type="submit" class="btn btn-outline-primary btn-wd">Search</button>
+                <button type="reset" class ="btn btn-outline-primary btn-wd">Clear</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("../partials/_footer") %>

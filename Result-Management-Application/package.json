@@ -1,0 +1,28 @@
+{
+  "name": "Result-Management-Application",
+  "version": "1.0.0",
+  "description": "This application has two types of users namely Teacher and student. Teacher can view, create, update & delete all the student records whereas student can only search for their result based on rollno and date of birth.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Shivam Jayara",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.4.1",
+    "mysql2": "^3.5.2",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

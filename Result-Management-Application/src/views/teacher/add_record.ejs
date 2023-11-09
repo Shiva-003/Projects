@@ -1,0 +1,50 @@
+<%- include("../partials/_header") %>
+
+<%- include("../partials/_navbar") %>
+
+<div class="container-md">
+
+  <%- include("../partials/_alert") %>
+
+  <a href="/teacher" class="btn btn-outline-primary mt-3 mb-3">&larr;All Users<i class="bi bi-people-fill"></i></a>
+  <div class="mb-2 row justify-content-center">
+    <div class="mb-3 text-center">
+      <h3 style="text-decoration: underline;"> Add New Record</h3>
+      <p>Use the below form to add a new record</p>
+    </div>
+    <div style="width: 58vw;">
+      <form action="/api/student" method="post" id="create-form">
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Roll No.</label>
+            <div class="col-sm-10">
+              <input type="number" name="rollno" class="form-control" id="inputEmail3" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" name="name" class="form-control" id="inputPassword3" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Date of Birth</label>
+            <div class="col-sm-10">
+              <input type="date" name="dob" class="form-control" id="inputPassword3" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Score</label> 
+            <div class="col-sm-10">
+              <input type="number" name="score" class="form-control" id="inputPassword3" required>
+            </div>
+          </div>
+          <div class="mt-4 d-flex gap-2 justify-content-md-center">
+            <button type="submit" value="submit" class="btn btn-outline-primary btn-wd" >Submit</button>
+            <button type="reset" class="btn btn-outline-primary btn-wd" >Clear</button>
+          </div>
+      </form>
+  </div>
+  </div>
+</div>
+
+<%- include("../partials/_footer") %>

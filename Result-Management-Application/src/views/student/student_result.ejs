@@ -1,0 +1,47 @@
+<%- include("../partials/_header") %>
+
+<%- include("../partials/_navbar") %>
+
+<div class="container-md">
+
+    <%- include("../partials/_alert") %>
+
+    <a href="/student" class="btn btn-outline-primary mt-3 mb-5">&larr;Back</a>
+    <div class="row justify-content-center">        
+        <div class="card text-center result-div" style="width: 45vw;">
+            <div class="card-header" style="font-size: 1.45rem;font-weight: bold;">
+            Result
+            </div>
+            <div class="card-body">
+                <div class="row justify-content-center card-wrapper mb-2">
+                    <h6 class="card-title attribute col-md-4">Roll No.</h6>
+                    <div class="col-md-1">:</div>
+                    <div class="col-md-4"><%= data.rollno %></div>
+                </div>
+                <div class="row justify-content-center card-wrapper mb-2">
+                    <h6 class="card-title attribute col-md-4">Name</h6>
+                    <div class="col-md-1">:</div>
+                    <div class="col-md-4"><%= data.name %></div>
+                </div>
+                <div class="row justify-content-center card-wrapper mb-2">
+                    <h6 class="card-title attribute col-md-4">Date of birth</h6>
+                    <div class="col-md-1">:</div>
+                    <div class="col-md-4"><%= data.dob %></div>
+                </div>
+                <div class="row justify-content-center card-wrapper">
+                    <h6 class="card-title attribute col-md-4">Score</h6>
+                    <div class="col-md-1">:</div>
+                    <div class="col-md-4"><%= data.score %></div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                <% if(data.score >=40){ %>
+                    Overall : Pass
+                <% }else{ %>
+                    Overall : Fail
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include("../partials/_footer") %>

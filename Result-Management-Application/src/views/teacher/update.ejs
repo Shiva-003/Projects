@@ -1,0 +1,51 @@
+<%- include("../partials/_header") %>
+
+<%- include("../partials/_navbar") %>
+
+<div class="container-md">
+
+  <%- include("../partials/_alert") %>
+
+  <a href="/teacher" class="btn btn-outline-primary mt-4 mb-3">&larr;All Users<i class="bi bi-people-fill"></i></a>
+  <div class="row justify-content-center">
+    <div class="mb-2 text-center">
+      <h3 style="text-decoration: underline;"> Update Record</h3>
+      <p>Use the below form to update record</p>
+    </div>
+    <div style="width: 55vw;">
+      <form action="/teacher/update/<%= data.rollno %>" method="post" id="update-form">
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Roll No.</label>
+            <div class="col-sm-10">
+              <input type="number" name="rollno" class="form-control" id="inputEmail3" value="<%= data.rollno %>">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" name="name" class="form-control" id="inputPassword3" value="<%= data.name %>" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Date of Birth</label>
+            <div class="col-sm-10">
+              <input type="date" name="dob" class="form-control" id="inputPassword3" value="<%= data.dob %>" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Score</label> 
+            <div class="col-sm-10">
+              <input type="number" name="score" class="form-control" id="inputPassword3" value="<%= data.score %>" required>
+            </div>
+          </div>
+          
+          <div class="mt-4 d-flex gap-2 justify-content-md-center">
+            <button type="submit" value="submit" class="btn btn-outline-primary btn-wd">Update</button>
+            <button type="reset" class="btn btn-outline-primary btn-wd">Reset</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/_footer") %>
